@@ -216,7 +216,10 @@
                             verCodeTitle.textContent = "Verification";
                             
                             // Changes sub-title to "An OTP has been sent to your email";
-                            verCodeSubTitleCtnt.textContent = "An OTP has been sent to your email";
+                            verCodeSubTitleCtnt.textContent = "An OTP has been sent to your email (Check Clipboard)";
+
+                            // Copy code to user's clipboard
+                            navigator.clipboard.writeText(`${thisVercart}`);
 
                             // Starts timer
                             verTimer();
